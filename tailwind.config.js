@@ -13,6 +13,11 @@ module.exports = {
       fontFamily: {
         integral: "'Integral CF'",
       },
+      colors: {
+        primary: {
+          DEFAULT: "#3D00B7",
+        },
+      },
     },
   },
   plugins: [],

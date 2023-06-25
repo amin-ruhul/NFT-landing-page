@@ -1,7 +1,8 @@
 import React from "react";
+import NavBar from "@/components/navbar";
 
 function Home() {
-  return <div className="font-integral">Home</div>;
+  return <NavBar />;
 }
 
 export default Home;
