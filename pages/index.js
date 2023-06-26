@@ -12,8 +12,8 @@ import AccountSection from "@/components/data-display/account-section";
 function Home() {
   return (
     <>
-      {/* <NavBar />
-      <HeroSection /> */}
+      <NavBar />
+      <HeroSection />
       <Branding />
       <div className="h-[70px]"></div>
 

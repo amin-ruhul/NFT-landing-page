@@ -2,12 +2,12 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { CiSearch } from "react-icons/ci";
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, className }) {
   const [searchKey, setSearchKey] = useState("");
 
   return (
     <form
-      className="rounded-full w-[18.75rem] relative"
+      className={`${className} rounded-full w-[18.75rem] relative`}
       onSubmit={(searchEvent) => {
         searchEvent.preventDefault();
         onSearch(searchKey);
@@ -28,6 +28,7 @@ function SearchBar({ onSearch }) {
 
 SearchBar.propTypes = {
   onSearch: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export default SearchBar;
