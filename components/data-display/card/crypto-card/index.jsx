@@ -1,9 +1,16 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 function CryptoCard({ cryptoData }) {
   return (
-    <div className="w-full p-[0.625rem] bg-white border rounded-[0.813rem]">
+    <motion.div
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      className="w-full p-[0.625rem] bg-white border rounded-[0.813rem]"
+    >
       <div className="w-full h-[13.875rem] relative rounded-[0.813rem]">
         <Image
           src={cryptoData.imageUrl}
@@ -53,7 +60,7 @@ function CryptoCard({ cryptoData }) {
         </span>
         <button className="text-primary">Place a bid</button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

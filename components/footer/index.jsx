@@ -66,6 +66,7 @@ function Footer() {
           <input
             type="text"
             className="h-[60px] w-[65%] rounded-full outline-0 px-5"
+            placeholder="Enter your email address"
           />
           <PrimaryButton
             btnText="Subscribe Now"

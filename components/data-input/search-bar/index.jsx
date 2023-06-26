@@ -14,7 +14,7 @@ function SearchBar({ onSearch, className }) {
       }}
     >
       <input
-        className="w-full h-[3.125rem] rounded-full border-[2px] border-[#EFEFEF] px-[1rem]"
+        className="w-full h-[3.125rem] rounded-full border-[2px] border-[#EFEFEF] px-[1rem] outline-0"
         placeholder="Search"
         value={searchKey}
         onChange={(e) => setSearchKey(e.target.value)}

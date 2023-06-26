@@ -5,6 +5,7 @@ import { cryptoList } from "@/utils/data/cryptoList";
 import { filterList } from "@/utils/data/filterList";
 import FilterButton from "@/components/data-input/button/filter-button";
 import SecondaryButton from "@/components/data-input/button/secondary-btn";
+import { motion, AnimatePresence } from "framer-motion";
 
 function MoreCryptoSection() {
   const MAX_DATA_LOAD = 8;
@@ -51,11 +52,16 @@ function MoreCryptoSection() {
         </button>
       </div>
 
-      <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[40px]">
-        {filteredCrypto.map((cryptoData) => (
-          <CryptoCard key={cryptoData.id} cryptoData={cryptoData} />
-        ))}
-      </div>
+      <motion.div
+        layout
+        className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[40px]"
+      >
+        <AnimatePresence>
+          {filteredCrypto.map((cryptoData) => (
+            <CryptoCard key={cryptoData.id} cryptoData={cryptoData} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
       <div className="flex items-center justify-center mt-[3.438rem] pb-[2.688rem]">
         <SecondaryButton

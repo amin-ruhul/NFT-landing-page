@@ -11,7 +11,10 @@ function NavBar() {
   return (
     <>
       <nav className="px-[1rem] lg:px-[7.5rem] flex justify-between items-center  border-b py-[1.875rem]">
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden"
+        >
           <RxHamburgerMenu className="h-[1.5rem] w-[1.5rem]" />
         </button>
         <div className="text-primary text-[1.5rem] font-integral">NFters</div>
