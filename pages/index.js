@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import Branding from "@/components/data-display/branding";
 import FeaturedCard from "@/components/data-display/card/featured-card";
 import FeaturedSection from "@/components/data-display/featured-section";
+import AccountSection from "@/components/data-display/account-section";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
 
       <FeaturedSection />
       <div className="h-[70px]"></div>
+      <AccountSection />
       <MoreCryptoSection />
       <Footer />
     </>
