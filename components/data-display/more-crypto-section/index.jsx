@@ -1,14 +1,23 @@
-import FilterButton from "@/components/data-input/button/filter-button";
-import CryptoCard from "../card/crypto-card";
-import { filterList } from "@/utils/data/filterList";
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
+import CryptoCard from "../card/crypto-card";
+import { cryptoList } from "@/utils/data/cryptoList";
+import { filterList } from "@/utils/data/filterList";
+import FilterButton from "@/components/data-input/button/filter-button";
+import SecondaryButton from "@/components/data-input/button/secondary-btn";
 
 function MoreCryptoSection() {
-  const [activeFilter, setActiveFilter] = useState(() => filterList[0].slug);
+  const MAX_DATA_LOAD = 8;
+
+  const [activeFilter, setActiveFilter] = useState(filterList[0].slug);
+  const [filteredCrypto, setFilteredCrypto] = useState(() =>
+    cryptoList.slice(0, MAX_DATA_LOAD)
+  );
 
   const handelFilter = (key) => {
     setActiveFilter(key);
+    let updatedData = cryptoList.filter((crypto) => crypto.type.includes(key));
+    setFilteredCrypto(updatedData);
   };
 
   return (
@@ -43,13 +52,16 @@ function MoreCryptoSection() {
       </div>
 
       <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[40px]">
-        <CryptoCard />
-        <CryptoCard />
-        <CryptoCard />
-        <CryptoCard />
-        <CryptoCard />
-        <CryptoCard />
-        <CryptoCard />
+        {filteredCrypto.map((cryptoData) => (
+          <CryptoCard key={cryptoData.id} cryptoData={cryptoData} />
+        ))}
+      </div>
+
+      <div className="flex items-center justify-center mt-[3.438rem] pb-[2.688rem]">
+        <SecondaryButton
+          btnText="More NFTs"
+          className="px-[2.5rem] py-[1.25rem] text-[1.25rem] font-medium"
+        />
       </div>
     </div>
   );

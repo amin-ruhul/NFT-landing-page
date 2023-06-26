@@ -7,9 +7,10 @@ function FilterButton({ filterData, className, onClick, activeSlug }) {
     <button
       className={classNames(
         {
-          "text-white bg-[#3D00B7]": activeSlug === filterData.slug,
+          "text-white bg-primary": activeSlug === filterData.slug,
+          "bg-[#dcdcdc33]": activeSlug !== filterData.slug,
         },
-        `${className} py-[0.625rem] px-[1.25rem] bg-[#dcdcdc33] rounded-full hover:bg-primary hover:text-white transition-colors duration-300 delay-100`
+        `${className} py-[0.625rem] px-[1.25rem] rounded-full hover:bg-primary hover:text-white transition-colors duration-300 delay-100`
       )}
       onClick={() => onClick(filterData.slug)}
     >
