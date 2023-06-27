@@ -25,10 +25,10 @@ function NavBar() {
         </ul>
         <div className="flex items-center space-x-[1.25rem]">
           <SearchBar className="hidden lg:block" />
-          <PrimaryButton className="hidden lg:block" />
+          <PrimaryButton btnText="Upload" className="hidden lg:block" />
           <SecondaryButton
             btnText="Connect Wallet"
-            className="px-[0.7rem] py-[0.5rem] lg:px-[1.375rem] lg:py-[1.125rem]"
+            className="px-[0.5rem] py-[0.5rem] lg:px-[1.375rem] lg:py-[1.125rem]"
           />
         </div>
       </nav>

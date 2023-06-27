@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function PrimaryButton({ btnText, className, onClick }) {
   return (
     <button
-      className={`${className} py-[1.125rem] px-[2.5rem] text-white bg-primary rounded-full`}
+      className={`${className} py-[1.125rem] px-[2.5rem] text-white bg-primary rounded-full hover:bg-primary-hover transition-colors duration-300 delay-100`}
       onClick={onClick}
     >
       {btnText}
