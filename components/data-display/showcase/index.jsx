@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import PrimaryButton from "@/components/data-input/button/primary-btn";
 import BidCard from "../card/bid-card";
@@ -8,7 +7,7 @@ import TopCollector from "../card/top-collector";
 
 function Showcase() {
   return (
-    <section className="px-[30px] lg:px-[120px] pt-[8.375rem] pb-[9.438rem] flex flex-col lg:flex-row justify-between space-y-[2rem] lg:space-y-0 ">
+    <section className="px-[1rem] lg:px-[7.5rem] pt-[8.375rem] pb-[9.438rem] flex flex-col lg:flex-row justify-between space-y-[2rem] lg:space-y-0 ">
       <article className="shrink-0 w-full lg:w-[25rem]">
         <div className="flex justify-between">
           <div className="w-full h-[20rem] lg:h-[26.5rem] relative">

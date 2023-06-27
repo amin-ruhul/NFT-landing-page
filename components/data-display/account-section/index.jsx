@@ -1,10 +1,9 @@
-import PrimaryButton from "@/components/data-input/button/primary-btn";
 import Image from "next/image";
-import React from "react";
+import PrimaryButton from "@/components/data-input/button/primary-btn";
 
 function AccountSection() {
   return (
-    <section className="px-[30px] lg:px-[120px] grid grid-cols-1 lg:grid-cols-2 items-center gap-[10rem] pb-[5.125rem] pt-[6.375rem]">
+    <section className="px-[1rem] lg:px-[7.5rem] grid grid-cols-1 lg:grid-cols-2 items-center gap-[10rem] pb-[5.125rem] pt-[6.375rem]">
       <div className="hidden lg:grid grid-cols-2 grid-rows-2 gap-[1rem] items-center">
         <div className="w-full relative h-[300px]">
           <Image

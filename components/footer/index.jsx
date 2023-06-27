@@ -4,7 +4,7 @@ import PrimaryButton from "../data-input/button/primary-btn";
 
 function Footer() {
   return (
-    <section className="px-[30px] lg:px-[120px] pt-[4.938rem] pb-[4.313rem] flex flex-col md:flex-row items-start justify-between border space-y-[2rem] lg:space-y-0">
+    <section className="px-[1rem] lg:px-[7.5rem] pt-[4.938rem] pb-[4.313rem] flex flex-col md:flex-row items-start justify-between space-y-[2rem] lg:space-y-0">
       <div>
         <h4 className="text-[1.5rem] font-integral mb-[1.688rem]">NFters</h4>
         <p className="text-[#565656] text-[0.875rem] lg:max-w-[20.813rem]">
@@ -65,7 +65,7 @@ function Footer() {
         <div className="border-[2px] border-[#F1F1F1] rounded-full flex items-center pr-1 mt-[1.5rem]">
           <input
             type="text"
-            className="h-[60px] w-[65%] rounded-full outline-0 px-5"
+            className="h-[60px] w-[65%] lg:w-auto rounded-full outline-0 px-5"
             placeholder="Enter your email address"
           />
           <PrimaryButton

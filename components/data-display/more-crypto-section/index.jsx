@@ -6,6 +6,7 @@ import { filterList } from "@/utils/data/filterList";
 import FilterButton from "@/components/data-input/button/filter-button";
 import SecondaryButton from "@/components/data-input/button/secondary-btn";
 import { motion, AnimatePresence } from "framer-motion";
+import classNames from "classnames";
 
 function MoreCryptoSection() {
   const MAX_DATA_LOAD = 8;
@@ -14,15 +15,26 @@ function MoreCryptoSection() {
   const [filteredCrypto, setFilteredCrypto] = useState(() =>
     cryptoList.slice(0, MAX_DATA_LOAD)
   );
+  const [loadedData, setLoadedData] = useState(() =>
+    cryptoList.slice(0, MAX_DATA_LOAD)
+  );
 
   const handelFilter = (key) => {
     setActiveFilter(key);
-    let updatedData = cryptoList.filter((crypto) => crypto.type.includes(key));
+    let updatedData = loadedData.filter((crypto) => crypto.type.includes(key));
     setFilteredCrypto(updatedData);
   };
 
+  const loadMoreData = () => {
+    let prevLoadData = filterList.length - 1;
+    let data = cryptoList.slice(0, prevLoadData + MAX_DATA_LOAD);
+    setFilteredCrypto(data);
+    setLoadedData(data);
+    setActiveFilter(filterList[0].slug);
+  };
+
   return (
-    <div className="px-[30px] lg:px-[120px] bg-[#d9e0ec33] pt-[4rem] w-full">
+    <div className="px-[1rem] lg:px-[7.5rem]  bg-[#d9e0ec33] pt-[4rem] w-full pb-[2.688rem]">
       <h2 className="text-[2.125rem] font-integral mb-[2.375rem]">
         Discover more NFTs
       </h2>
@@ -63,10 +75,22 @@ function MoreCryptoSection() {
         </AnimatePresence>
       </motion.div>
 
-      <div className="flex items-center justify-center mt-[3.438rem] pb-[2.688rem]">
+      <div
+        className={classNames(
+          {
+            hidden:
+              filteredCrypto.length === 0 ||
+              loadedData.length === cryptoList.length,
+            flex:
+              filteredCrypto.length && loadedData.length !== cryptoList.length,
+          },
+          `items-center justify-center mt-[3.438rem]`
+        )}
+      >
         <SecondaryButton
           btnText="More NFTs"
           className="px-[2.5rem] py-[1.25rem] text-[1.25rem] font-medium"
+          onClick={loadMoreData}
         />
       </div>
     </div>

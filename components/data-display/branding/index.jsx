@@ -1,9 +1,8 @@
 import Image from "next/image";
-import React from "react";
 
 function Branding() {
   return (
-    <section className="px-[30px] lg:px-[120px] bg-[#d9e0ec33] py-[8.063rem] flex flex-col lg:flex-row items-center justify-between space-y-[3rem] lg:space-y-0">
+    <section className="px-[1rem] lg:px-[7.5rem] bg-[#d9e0ec33] py-[8.063rem] flex flex-col lg:flex-row items-center justify-between space-y-[3rem] lg:space-y-0">
       <h1 className="text-[1.75rem] font-integral max-w-[24.875rem]">
         The amazing NFT art of the world here
       </h1>

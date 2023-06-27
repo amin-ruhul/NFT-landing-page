@@ -1,11 +1,10 @@
-import PrimaryButton from "@/components/data-input/button/primary-btn";
-import React from "react";
-import StatDisplay from "../stat-display";
 import Image from "next/image";
+import StatDisplay from "../stat-display";
+import PrimaryButton from "@/components/data-input/button/primary-btn";
 
 function HeroSection() {
   return (
-    <div className="px-[30px] lg:px-[120px] flex items-center flex-col md:flex-row  justify-between pt-[3.563rem] pb-[7rem]">
+    <div className="px-[1rem] lg:px-[7.5rem] flex items-center flex-col md:flex-row  justify-between pt-[3.563rem] pb-[7rem]">
       <div className="w-full lg:max-w-[38.25rem]">
         <h1 className="font-integral tracking-[2px] text-[2.5rem]">
           Discover, and collect Digital Art NFTs

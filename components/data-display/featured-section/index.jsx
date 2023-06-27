@@ -1,10 +1,9 @@
-import { filterList } from "@/utils/data/filterList";
 import FeaturedCard from "../card/featured-card";
 import { featuredList } from "@/utils/data/featuredList";
 
 function FeaturedSection() {
   return (
-    <section className="px-[30px] lg:px-[120px] bg-[#d9e0ec33]  pt-[4.063rem] pb-[6.5rem]">
+    <section className="px-[1rem] lg:px-[7.5rem] bg-[#d9e0ec33]  pt-[4.063rem] pb-[6.5rem]">
       <h3 className="mb-[3.438rem] font-integral text-[1.75rem]">
         Collection Featured NFTs
       </h3>
